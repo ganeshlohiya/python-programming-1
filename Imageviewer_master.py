@@ -1,4 +1,10 @@
-import glob, sys
+#Div-M B-2
+#course project
+#image viewer
+
+
+imp glob ,sys
+
 from easygui import *
 n= diropenbox(msg=None, title=None, default=None)
 path = glob.glob(n+'/*.png')
@@ -8,7 +14,7 @@ M = True
 i=0
 while M:
 
-	choice = buttonbox(msg='Which Choclate', title=' ', choices=('Exit', 'Previous', 'Next'), image=path[i])
+	choice = buttonbox(msg='image viewer', title=' ', choices=('Exit', 'Previous', 'Next'), image=path[i])
 	if choice == 'Exit':
 		sys.exit(0)
 	if choice == 'Previous':
@@ -16,13 +22,13 @@ while M:
 			continue
 		else:
 			i -= 1
-			choice = buttonbox(msg='Which Choclate', title=' ', choices=('Exit', 'Previous', 'Next'), image=path[i])
+			choice = buttonbox(msg='image viewer', title=' ', choices=('Exit', 'Previous', 'Next'), image=path[i])
 	if choice == 'Next':
 		if i >= n:
 			continue
 		else:
 			i+=1
-			choice = buttonbox(msg='Which Choclate', title=' ', choices=('Exit', 'Previous', 'Next'), image=path[i])
+			choice = buttonbox(msg='image viewer', title=' ', choices=('Exit', 'Previous', 'Next'), image=path[i])
 
 		
 	
